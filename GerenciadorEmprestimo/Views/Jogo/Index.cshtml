@@ -1,0 +1,61 @@
+﻿@model IEnumerable<GerenciadorEmprestimo.Entidades.Jogo>
+
+@{
+    ViewBag.Title = "Gerenciar Jogos";
+}
+<h2>Gerenciar Jogos</h2>
+
+<p>
+    <input type="button" value="Novo" id="btnIncluir" />
+</p>
+
+<table id="tblJogo" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Gênero</th>
+            <th>Emprestado Para</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+</table>
+
+<div id="dialog-form" title="Novo Registro">
+    <p class="validateTips">Campos Com * são obrigatórios</p>
+
+    <form id="frmManter">
+        <input type="hidden" id="hddCodigo" name="Codigo" />
+        <fieldset>
+            <label for="Titulo">Titulo*</label>
+            <input type="text" name="Titulo" id="txtTitulo" class="text ui-widget-content ui-corner-all">
+            <label for="Genero">Genero</label>
+            <input type="text" name="Genero" id="txtGenero" class="text ui-widget-content ui-corner-all">
+
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+</div>
+
+
+<div id="dialog-Emprestar" title="Emprestar Jogo">
+    <p class="validateTips">Campos Com * são obrigatórios</p>
+
+    <form id="frmEmprestar">
+        <input type="hidden" id="hddCodigoEmprestar" name="Codigo" />
+        <fieldset>
+            <label for="Locatario.Codigo">Amigo*</label>
+            <select id="ddlAmigo"  name="Locatario.Codigo"></select>
+
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+</div>
+
+<div id="dialog-confirm-devolver" style="display:none" title="Excluir">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>O Jogo foi devolvido?</p>
+</div>
+@section scripts{
+    <script src="@Url.Content("~/Scripts/Jogo/index.js")"></script>
+}

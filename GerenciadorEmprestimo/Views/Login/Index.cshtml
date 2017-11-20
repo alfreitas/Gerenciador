@@ -1,0 +1,21 @@
+﻿@model GerenciadorEmprestimo.Models.LoginModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron">
+    <h1>Gerenciamento de jogos</h1>
+    <p class="lead">Entre com seu usuario e senha</p>'
+    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+    {
+        if (ViewBag.UsuarioInvalido!= null && ViewBag.UsuarioInvalido)
+        {
+            <p>Usuário ou senha incorreto</p>
+        }
+        <label id="lblUser">Usuário</label>
+        @Html.TextBoxFor(d => d.Usuario)
+        <label id="lblUser">Senha</label>
+            @Html.PasswordFor(d => d.Senha)
+            <input type="submit" id="btnLogin" value="Entrar">
+    }
+</div>

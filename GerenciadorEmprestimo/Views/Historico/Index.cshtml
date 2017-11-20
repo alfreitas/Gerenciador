@@ -1,0 +1,21 @@
+﻿@model IEnumerable<GerenciadorEmprestimo.Entidades.Pessoa>
+
+@{
+    ViewBag.Title = "Gerenciar Amigos";
+}
+<h2>Histórico</h2>
+
+<table id="tblHistorico" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Jogo</th>
+            <th>Amigo</th>
+            <th>Data Inicio</th>
+            <th>Data Fim</th>
+        </tr>
+    </thead>
+</table>
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/Historico/index.js")"></script>
+}

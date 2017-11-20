@@ -1,0 +1,49 @@
+﻿@model IEnumerable<GerenciadorEmprestimo.Entidades.Pessoa>
+
+@{
+    ViewBag.Title = "Gerenciar Amigos";
+}
+<h2>Gerenciar Amigos</h2>
+
+<p>
+    <input type="button" value="Novo" id="btnIncluir" />
+</p>
+
+<table id="tblPessoa" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereco</th>
+            <th>Cidade</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+</table>
+
+<div id="dialog-form" title="Novo Registro">
+    <p class="validateTips">Campos Com * são obrigatórios</p>
+
+    <form id="frmManter">
+        <input type="hidden" id="hddCodigo" name="Codigo" />
+        <fieldset>
+            <label for="Nome">Nome*</label>
+            <input type="text" name="Nome" id="txtNome" class="text ui-widget-content ui-corner-all">
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" id="txtEndereco" class="text ui-widget-content ui-corner-all">
+            <label for="Cidade">Cidade</label>
+            <input type="text" name="Cidade" id="txtCidade" class="text ui-widget-content ui-corner-all">
+
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+</div>
+
+<div id="dialog-confirm" style="display:none" title="Excluir">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Confirma a exclusão?</p>
+</div>
+
+
+@section scripts{
+    <script src="@Url.Content("~/Scripts/Pessoa/index.js")"></script>
+}
