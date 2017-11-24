@@ -67,10 +67,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Entidades\GerenciadorEmprestimo.Entidades.csproj">
-      <Project>{05f314bd-96c7-478c-a479-b509dc549c00}</Project>
-      <Name>GerenciadorEmprestimo.Entidades</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GerenciadorEmprestimo.Data.Interface\GerenciadorEmprestimo.Data.Interface.csproj">
       <Project>{63DF06AF-E82C-40CD-AC4C-A38C53A9D34F}</Project>
       <Name>GerenciadorEmprestimo.Data.Interface</Name>
@@ -78,6 +74,10 @@
     <ProjectReference Include="..\GerenciadorEmprestimo.Data\GerenciadorEmprestimo.Data.csproj">
       <Project>{264ed321-0999-4ba1-a666-1ea1765fa251}</Project>
       <Name>GerenciadorEmprestimo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GerenciadorEmprestimo.Entidades\GerenciadorEmprestimo.Entidades.csproj">
+      <Project>{05f314bd-96c7-478c-a479-b509dc549c00}</Project>
+      <Name>GerenciadorEmprestimo.Entidades</Name>
     </ProjectReference>
     <ProjectReference Include="..\GerenciadorEmprestimo.Negocio\GerenciadorEmprestimo.Business.csproj">
       <Project>{f11584ae-9801-4437-b99d-2d5a87c984dd}</Project>

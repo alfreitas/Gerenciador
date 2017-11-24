@@ -259,7 +259,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Entidades\GerenciadorEmprestimo.Entidades.csproj">
+    <ProjectReference Include="..\GerenciadorEmprestimo.Entidades\GerenciadorEmprestimo.Entidades.csproj">
       <Project>{05f314bd-96c7-478c-a479-b509dc549c00}</Project>
       <Name>GerenciadorEmprestimo.Entidades</Name>
     </ProjectReference>
